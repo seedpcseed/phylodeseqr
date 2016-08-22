@@ -1,0 +1,11 @@
+phylodeseqr-package	phylodeseqr-package
+deseq2plot	deseq2plot
+gm_mean	gm_mean
+make.richness.map	make.richness.map
+make_deseq	make_deseq
+make_phyloseq	make_phyloseq
+otu2melt	otu2melt
+phylodeseqr	phylodeseqr-package
+pick_directory	pick_directory
+result2taxa	result2taxa
+richness_plot	richness_plot

@@ -1,0 +1,69 @@
+Changes in new version
+
+Version agricolae 1-2.1 (August 25, 2014)
+-------------------------------------------
+1. Move packages from Suggests to Imports
+2. AUDPS. The Area Under the Disease Progress Stairs.
+3. AMMI stability value (ASV) and Yield stability index (YSI)
+4. Design youden
+5. Now the PBIB.test function uses missing values.
+
+Version agricolae 1-2.0 (June 30, 2014)
+-------------------------------------------
+1. AMMI: aditional parameters PC=FALSE or TRUE, output principal components, check error equal cero.
+2. plot.AMMI: graphic aditional parameters lwd = 1.8, length = 0.1 to arrow function 
+3. simulation.model: aditional parameter console=FALSE or TRUE, output in console
+4. resampling.model: aditional parameter console=FALSE or TRUE, output in console
+5. stability.par: aditional parameter console=FALSE or TRUE, output in console
+6. stability.nonpar: aditional parameter console=FALSE or TRUE, output in console
+
+Version agricolae 1-1.9 (June 17, 2014)
+-------------------------------------------
+1. PBIB new parameter: group=TRUE
+PBIB.test(block,trt,replication,y,k, method=c("REML","ML","VC"), 
+test = c("lsd","tukey"), alpha=0.05, console=FALSE, group=TRUE)
+when you have many treatments to use group=FALSE.
+2. design.rcbd(..., continue=FALSE) 
+continue=TRUE or FALSE, continuous numbering of plot.
+3. Median.test. New function for multiple comparisons of treatments with Median.
+4. Now, AMMI function checks the minimum number of environments and genotypes.
+Now use console=TRUE or FALSE to output in screen. the graphs are produced by 
+the plot function.
+5. plot.AMMI() or plot() functions generate plot of the AMMI with others principal components.
+type=1 (biplot), type=2 (triplot) and type=3 (influence genotype)
+6. Changed parameters by default "first = TRUE" in designs: rcbd, ab, split and lsd.
+7. Now vignettes in agricolae.
+8. change name ogive.freq by ojiva.freq, the parameters are same.
+9. AUDPC the evaluation parameter  now can be numeric vector. To see help(audpc)  
+
+Version agricolae 1-1.8 (February 21, 2014)
+-------------------------------------------
+* zigzag(outdesign)
+The new function applied to designs: rcbd, lsd, graeco, split, strip, ab, alpha, bib, cyclic,
+lattice, dau. The outdesign is the output book the function design.###().
+The function zigzag change the order number plots in serpentine form.
+# Randomized complete design.
+trt<-LETTERS[1:5]
+outdesign<-design.rcbd(trt,r=4, serie=2)
+book<-outdesign$book
+> t(matrix(book[,1],5))
+     [,1] [,2] [,3] [,4] [,5]
+[1,]  101  102  103  104  105
+[2,]  201  202  203  204  205
+[3,]  301  302  303  304  305
+[4,]  401  402  403  404  405
+fieldbook <- zigzag(outdesign)
+> t(matrix(fieldbook[,1],5))
+     [,1] [,2] [,3] [,4] [,5]
+[1,]  101  102  103  104  105
+[2,]  205  204  203  202  201
+[3,]  301  302  303  304  305
+[4,]  405  404  403  402  401
+
+* Now, all design functions have two output objects: parameters and book, the parameters contain initial values that will allow reproduce the design and book contain field book.
+* The alpha and lattice designs have additionally two objects: statistics and 
+field sketches. 
+* BIB have the statistics with parameters and field book.
+* Cyclic have the stetches with parameters and field book.
+
+

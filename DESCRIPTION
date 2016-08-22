@@ -1,0 +1,28 @@
+Package: phylodeseqr
+Type: Package
+Title: Tools for analysis of 16S rRNA data in a pipeline from phyloseq to DESeq
+Version: 1.0
+Date: 2015-05-03
+Authors@R: person("Patrick", "Seed", email = "patrick.seed@duke.edu",
+  role = c("aut", "cre"))
+Description: To facilitate more rapid analysis, bringing together key tools
+    needed for 16S rRNA analysis after completion of initial OTU assembly.
+Depends:
+    R (>= 3.1.0)
+Imports:
+    ggplot2,
+    phyloseq,
+    metagenomeSeq,
+    DESeq2,
+    plyr,
+    dplyr,
+    reshape2,
+    vegan,
+    Biobase,
+    RColorBrewer,
+    ellipse,
+    agricolae,
+    tcltk
+License: MIT + file LICENSE
+LazyData: true
+RoxygenNote: 5.0.1

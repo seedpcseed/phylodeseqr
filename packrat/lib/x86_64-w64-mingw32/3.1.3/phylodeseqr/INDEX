@@ -1,0 +1,15 @@
+deseq2plot              Make a plot from deseq results
+gm_mean                 Calculate the geometric mean
+make.richness.map       Make a map of diversity scores for plotting
+make_deseq              Make a DESeq S4 object using a user design and
+                        a phyloseq S4 object
+make_phyloseq           Make phyloseq S4 object
+otu2melt                A function to melt data from an S4 phyloseq
+                        table with metadata
+phylodeseqr-package     What the package does (short line) ~~ package
+                        title ~~
+pick_directory          A function to choose the working director
+result2taxa             Add taxa from a phyloseq object to the results
+                        analysis of a DESeq object
+richness_plot           Plot diversity data from the make_richness
+                        function
